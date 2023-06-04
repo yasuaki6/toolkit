@@ -37,7 +37,9 @@ def stock_code(start=1):
         
 
 class stock_dowload():
-    def yahoo(stock_code,period=None,frequency=None):   
+    def yahoo(stock_code,period=None,
+              frequency=None):   
+          
             my_share = share.Share(str(stock_code)+'.T')
             symbol_data = None
             
@@ -72,6 +74,7 @@ class stock_dowload():
             return symbol_data
 
     def stooq(stock_code,start=None,end=None):
+        
         start = datetime.datetime.now() - datetime.timedelta(days=30) if start == None else start
         end = datetime.datetime.now()  if end == None else end
          
@@ -80,6 +83,8 @@ class stock_dowload():
         return df
 
     def target_dowload(target,start=datetime.datetime.today() - datetime.timedelta(days=7) ,end=datetime.datetime.today()):
+    
+        
         tg = str(target) + '.JP'
         df = pdr.DataReader(tg,data_source='stooq',start=start,end=end).rename(columns=str.lower).tz_localize('utc').tz_convert('Asia/Tokyo').iloc[::-1]
         
@@ -155,7 +160,6 @@ class Scaler():
 
     
 class Bias():
-
     def Exponential(df,a=2):
         f = lambda x:x**a   
         return list(map(f,df))
@@ -188,6 +192,7 @@ class Comparer():
             bond = abs(org-sub)
             bond = Bias.Exponential(bond)
             minbox.append(round(sum(bond),1))  
+
         else:            
             for i in range(len(sub)-len(org)):
                 bond = abs((org - sub[i:len(org)+i]))
@@ -214,6 +219,7 @@ class Comparer():
             bond = abs(org-sub)
             bond = Bias.Exponential(bond)
             minbox.append(sum(bond))
+
         else:            
             for i in range(len(sub)-len(org)):
                 bond = org + sub[i:len(org)+i]
@@ -422,6 +428,7 @@ class handle_mysql():
         retrun dict{companyname:buf}'''
         result = {}
         if created == None:created = self.setting.start
+
         self.corsor.execute(('SELECT * FROM imgs WHERE created_at = "{}"').format(created))
         for name,buf,created_at in self.corsor:
             result[name] = buf
@@ -565,13 +572,12 @@ class Canvas(Plot):
         self.canvas.draw()
         self.canvas_wid.pack(fill=tk.BOTH, expand=1)
 
-
     def candle(self,event=None):
         #この関数は現状は使うことはない。
         super().cla()
         super().candle_plot(self.setting.org_df)
-        for i in range(5):
-            
+        for i in range(5):   
+
             try:
                 name,df = next(database.get())   
                   
@@ -638,7 +644,6 @@ def worker():
 
     database.updeta_processor(category)
        
-
 class update(Plot):
     """databaseにdataを挿入、imgbinary―をfileにクラス"""
     def __init__(self,setting,days=-1):
@@ -710,8 +715,7 @@ class update(Plot):
         buf = self.seve_plot()
         return buf
              
-                
-            
+                          
 logging.basicConfig(level=logging.DEBUG,format='%(processName)s:%(message)s')
 
 if __name__ == '__main__':
