@@ -1,0 +1,369 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: none;
+font-style: normal;
+text-align: left;
+zoom: 1;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+table {
+border-collapse: collapse;
+font-family: inherit;
+}
+h1,h2,h3,h4,h5 {
+font-size: 100%;
+font-weight: normal;
+line-height: 1;
+}
+input,textarea,select {
+font-family: inherit;
+font-size: 16px;
+}
+input[type="button"],input[type="text"],input[type="submit"] {
+-webkit-appearance: none;
+border-radius: 0;
+}
+textarea {
+resize: none;
+-webkit-appearance: none;
+border-radius: 0;
+}
+th,td {
+border-collapse: collapse;
+}
+table th,table td {
+white-space: nowrap;
+}
+ul,ol {
+list-style-type: none;
+}
+img {
+vertical-align: text-bottom;
+vertical-align: -webkit-baseline-middle;
+max-width: 100%;
+height: auto;
+width /***/:auto;
+}
+
+
+head{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 12px;
+}
+
+h2{
+    display: inline-block;
+}
+
+h3{
+    display: inline-block;
+}
+
+h4{
+    display: inline-block;
+}
+
+p{
+    display: inline-block;
+}
+
+.menuber{
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding:10px;
+    position: sticky;
+}
+
+.menuber-ul{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+
+.menuber-ul li a{
+    text-decoration: none;
+    color: black;
+    margin: 0 3em;
+}
+
+.hyde{
+    display: none;
+}
+
+section{
+    position:static;
+}
+
+section form{
+    position: absolute;
+}
+
+section form button{
+    display: inline-block;
+}
+
+.menuber ul li{
+    font-size: 0.5rem;
+}
+
+.font h2{
+    font-size: 5rem;
+    letter-spacing: 0.25rem;
+    font-weight: 700;
+}
+
+.font h3{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 3rem;
+    margin: 0 5rem 3rem;
+}
+
+.font h4{
+    font-size: 2rem;
+    color: rgb(221, 221, 221);
+    max-width: 20rem;
+    padding: 10px;
+}
+
+.font p{
+    font-size: 1.5rem;
+    color: white;
+}
+
+form button{
+    position: absolute;
+    color: white;
+    margin: 20px;
+    border: 2px solid rgb(46, 138, 209);
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: rgb(46, 138, 209);
+}
+
+form button:hover{
+    background-color: rgb(85, 139, 241);
+}
+
+.catch-copy-1 form{
+    width: 100%;
+    height: 100%;
+}
+
+.catch-copy-1 .font{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.catch-copy-1 img{
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.catch-copy-1 .font h2{
+    margin: 50px;
+}
+
+
+.catch-copy-1 .font h4{
+    white-space: nowrap;
+    position:absolute;
+    bottom: 12rem;
+    right: 30rem;
+}
+
+.catch-copy-1 .font p{
+    
+    font-weight: 500;
+    position: absolute;
+    bottom: 7rem;
+    right:8rem;
+}
+
+.catch-copy-1 form button{
+    bottom: 0;
+    right:1rem;
+}
+
+.catch-copy-2 div{
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.catch-copy-2 form button{
+    bottom: 0;
+    right:0;
+}
+
+.catch-copy-2 .explanation{
+    position: relative;
+    max-width: 96%;
+    font-size: 1.5rem;
+    border: 1px solid white;
+    border-radius: 20px;
+    line-height: 2.5rem;
+    letter-spacing: 0.2rem;
+    padding: 20px 20px 50px 20px;
+    word-wrap: break-word;
+    background-color: rgb(241, 241, 241);
+}
+
+.catch-copy-2 .explanation form{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.catch-copy-2 img{
+    transition: 7s;
+    opacity: 0;
+}
+
+
+.catch-copy-2 .explanation form button{
+    height: 30px;
+    box-shadow: 5px 4px 2px rgb(108, 108, 108);
+    width: 150px;
+    padding: 0;
+}
+
+.catch-copy-4 p{
+    font-size: 3rem;
+}
+
+.catch-copy-4 button{
+    height: 30px;
+    width: 150px;
+    padding: 0;
+}
+
+footer .top{
+    border-top: 1px solid rgb(29, 29, 39);
+    background-color: rgb(235, 235, 235);
+    padding: 10px;
+    display: flex;
+    height: 11rem;
+}
+
+footer div .lyncParent h2{
+    display: block;
+}
+
+footer div .LyncElement{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+footer div .LyncElement ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+footer div .LyncElement ul li{
+    font-size: 1.5rem;
+    margin-left: 2.2rem;
+}
+
+footer div .LyncElement ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+footer div .LyncParent h3 a{
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+
+footer h2{
+    font-size: 6rem;
+    font-family: var(--bs-font-sans-serif);
+}
+
+nav img{
+    width: 10rem;
+}
+footer img{
+    width: auto;
+    height: 10rem;
+}
+
+@media(max-width: 630px){
+    .catch-copy-1 .font h4{
+        left: 1rem;
+        margin-bottom: 4rem
+    }
+    .catch-copy-1 .font p{
+        left: 2rem;
+    }
+}
+
+@media(max-width: 420px) {
+    html{
+        font-size: 6px;
+    }
+    body{
+        width: 50vh;
+    }
+    .catch-copy-2 .explanation {
+        position: relative;
+        width: 76%;
+        font-size: 1.5rem;
+        border: 1px solid white;
+        border-radius: 20px;
+        line-height: 2.5rem;
+        letter-spacing: 0.1rem;
+        word-wrap: break-word;
+        background-color: rgb(241, 241, 241);
+    }
+    
+    form button{
+        position: absolute;
+        color: white;
+        margin: 0 40px 10px 60px;
+        border: 2px solid rgb(46, 138, 209);
+        border-radius: 1rem;
+        padding: 1rem;
+        background-color: rgb(46, 138, 209);
+    }
+
+    .catch-copy-1 .font h4{
+        left: 1rem;
+    }
+    .catch-copy-1 .font p{
+        left: 2rem;
+    }
+}
+
+.font p span{
+    font-size: 2rem;
+}
+
